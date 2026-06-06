@@ -1,36 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <script type="module" src="/src/main.js"></script>
-  <title>Frontend Mentor | Product list with cart</title>
-  
-</head>
-<body>
-  <main class="relative flex flex-col bg-[#FCF9F7] justify-center items-center gap-5">
-    <h1 class=" self-start pl-7 py-8 text-5xl font-bold">Desserts</h1>
-    <section id="filtros" class="flex flex-wrap gap-10 items-center justify-center">
-      <input class="  bg-white px-5 py-5 shadow " type="text" id="search-bar" placeholder="🔎 Search for a Dessert...">
-      <select class="  shadow bg-white w-62.5 px-5 py-5" name="dessert-price" id ="dessert-price">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script type="module" src="/src/main.js"></script>
+    <title>Frontend Mentor | Product list with cart</title>
+  </head>
+  <body>
+    <main
+      class="relative flex flex-col bg-[#FCF9F7] justify-center items-center gap-5"
+    >
+      <h1 class="self-start pl-7 py-8 text-5xl font-bold">Desserts</h1>
+
+      <section
+        id="filtros"
+        class="flex flex-wrap gap-10 items-center justify-center"
+      >
+        <input
+          class="bg-white px-5 py-5 shadow"
+          type="text"
+          id="search-bar"
+          placeholder="🔎 Search for a Dessert..."
+        />
+        <select
+          class="shadow bg-white w-62.5 px-5 py-5"
+          name="dessert-price"
+          id="dessert-price"
+        >
           <!-- puede hacerse con js ya que region es propiedad del objeto -->
           <option value="" selected disabled>Filter by price</option>
           <option value="default">All</option>
-        
         </select>
-    </section>
-    <section id="card-container" class="relative grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-10 gap-10"></section>
-    <section id="cart-container"></section>
+      </section>
+      <div class="flex flex-col justify-center items-center mdflex-row md:flex-wrap">
+        <section
+          id="card-container"
+          class="grid grid-cols-1 md:grid-cols-3 px-10 gap-10"
+        ></section>
+        <section id="cart-container"></section>
+      </div>
+    </main>
 
-  </main>
-
-
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Rafael Lopez</a>.
-  </footer>
-</body>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Rafael Lopez</a>.
+    </footer>
+  </body>
 </html>
